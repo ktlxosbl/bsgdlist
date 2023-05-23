@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>BSGD 3-1 EVENING</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search....." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">ALDE, CHARIES ANN</a></li>
+  <li><a href="#">PARAWAN, ARIANNE</a></li>
+
+  <li><a href="#">GORDILLO, MARC JOSEPH</a></li>
+  <li><a href="#">INDIG, RICA</a></li>
+
+  <li><a href="https://ktlxosbl.github.io/PORTFOLIO/">OSABEL, KATE ALEXIS S.</a></li>
+  <li><a href="#">SEVILLA, CRISTINA</a></li>
+
+  <li><a href="#">BACLAY, JOHN EDZEL</a></li>
+  <li><a href="#">BONGHANOY, KRISTINE</a></li>
+
+  <li><a href="#">SANOY, SHEILA MAE</a></li>
+  <li><a href="#">RUBEN, MERZI</a></li>
+
+  <li><a href="#">PANILAG, JOHN ELMER</a></li>
+  <li><a href="#">CAMACHO , MERRY JEAN</a></li>
+
+  <li><a href="#">DANO, JOHN CARLO</a></li>
+  <li><a href="#">DESPI, KESSEL</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
